@@ -1,15 +1,51 @@
-rsd-engineeringcourse
-=====================
+---
+title: An Introduction to Agile Project Management with Github
+layout: default
+---
 
-Course materials for Turing's Research Software Engineering course. Also see [UCL's](https://github.com/UCL/rsd-engineeringcourse).
+# MPHYG001: An Introduction to Agile Project Management with Github
 
-Content:
-In this course, you will move beyond programming, to learn how to construct reliable, readable, efficient research software in a collaborative environment. The emphasis is on practical techniques, tips, and technologies to effectively build and maintain complex code. This is a relatively short (32 hours over 8 half-days), intensive, practical course.
+##Introduction
 
-Prerequisites:
-You must have reasonable experience in at least one compiled language, such as C++, C, or Fortran, and at least one dynamic language, such as Python, Ruby, Matlab or R.
-You must also have experience of the Unix shell.
+We will teach how to manage a backlog of tasks via short working 'sprints', and coordinate a team through regular 'scrums'. The history and philosophy of Agile Development and its application to non-programming projects will be considered.The session will cover using Markdown to co-author documents in a distributed fashion and the basics of version control.
+You'll use the web-based GitHub interface for non-programmers and learn to use GitHub Flow so that contributions can be easily reviewed and accepted.
 
-Examples and exercises for this course will be provided in Python.  You will therefore find it easiest to follow along if you have experience in at least one of these languages. Previous experience with version control (such as from Software Carpentry) would be helpful.
+##Pre-requisites
 
-You are required to bring your own laptop to the course as the classrooms we are using do not have desktop computers.
+Trainees should bring a web-connected laptop device for this hands-on practical tutorial.
+
+Please note, coding experience is not required to take part.
+
+
+##Registration
+
+https://www.eventbrite.co.uk/e/an-introduction-to-agile-project-management-with-github-tickets-49130045288
+
+##Instructors
+
+* [James Hetherington](https://www.turing.ac.uk/people/researchers/james-hetherington)
+
+##Schedule
+
+1000-1125: Session 1: Agile Project Management
+1135-1300: Session 2: Version Control
+
+##Synopsis
+
+* The Agile philosophy
+* Components of an agile process
+* Managing tasks in Github
+* Roles and meetings in Scrum
+
+* Documentation and version Control
+* Content-layer presentation-layer separation
+* Markdown
+* Version control basics
+* Branches and pull requests
+
+Versions
+--------
+
+You can find the course notes as HTML via the navigation bar to the left.
+
+The [notes](notes.pdf) are also available in a printable pdf format.
