@@ -1,4 +1,8 @@
-Theory session 3: Wikis and documentation
+---
+title: Wikis and documentation
+---
+
+# Theory session 3: Wikis and documentation
 =========================================
 
 Documentation

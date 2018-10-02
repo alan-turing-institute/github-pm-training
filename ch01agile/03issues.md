@@ -1,4 +1,8 @@
-Practical Session 1: Issue Tracking In Github
+---
+title: Issue tracking in Github
+---
+
+# Practical Session 1: Issue Tracking In Github
 =============================================
 
 In groups of four, trainees should form teams to work on a pretend project.

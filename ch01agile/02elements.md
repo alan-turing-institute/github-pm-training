@@ -1,4 +1,8 @@
-Theory 1: Elements of Agile Processes
+---
+title: Elements of agile processes
+---
+
+# Theory 1: Elements of Agile Processes
 =====================================
 
 Elements of agile
