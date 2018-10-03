@@ -16,10 +16,9 @@ Trainees should bring a web-connected laptop device for this hands-on practical 
 
 Please note, coding experience is not required to take part.
 
-
 ##Registration
 
-https://www.eventbrite.co.uk/e/an-introduction-to-agile-project-management-with-github-tickets-49130045288
+[Via Eventbrite](https://www.eventbrite.co.uk/e/an-introduction-to-agile-project-management-with-github-tickets-49130045288)
 
 ##Instructors
 
@@ -27,8 +26,8 @@ https://www.eventbrite.co.uk/e/an-introduction-to-agile-project-management-with-
 
 ##Schedule
 
-1000-1125: Session 1: Agile Project Management
-1135-1300: Session 2: Version Control
+* 1000-1125: Session 1: Agile Project Management
+* 1135-1300: Session 2: Version Control
 
 ##Synopsis
 
@@ -36,16 +35,8 @@ https://www.eventbrite.co.uk/e/an-introduction-to-agile-project-management-with-
 * Components of an agile process
 * Managing tasks in Github
 * Roles and meetings in Scrum
-
 * Documentation and version Control
 * Content-layer presentation-layer separation
 * Markdown
 * Version control basics
 * Branches and pull requests
-
-Versions
---------
-
-You can find the course notes as HTML via the navigation bar to the left.
-
-The [notes](notes.pdf) are also available in a printable pdf format.
