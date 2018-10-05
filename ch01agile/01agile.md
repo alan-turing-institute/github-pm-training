@@ -2,7 +2,7 @@
 title: Agile project management
 ---
 
-# Introduction: Agile Project Management
+Introduction: Agile Project Management
 ==========================================
 
 Waterfall
