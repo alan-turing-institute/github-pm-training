@@ -6,7 +6,14 @@ PANDOCARGS=-t revealjs -s -V theme=night --css=http://lab.hakim.se/reveal-js/css
 					 --css=$(ROOT)/css/ucl_reveal.css --css=$(ROOT)/site-styles/reveal.css \
            --default-image-extension=png --highlight-style=zenburn --mathjax -V revealjs-url=http://lab.hakim.se/reveal-js
 
+PANDOC_OPTIONS=--smart --standalone
+
+PANDOC_HTML_OPTIONS=--to html5 --template jekyll.tpl
+
 NOTEBOOKS=$(filter-out %.v2.ipynb %.nbconvert.ipynb,$(wildcard ch*/*.ipynb))
+# Convert all files in this directory that have a .md suffix
+SOURCE_DOCS := $(wildcard ch*/0*.md)
+EXPORTED_DOCS = $(SOURCE_DOCS:.md=.html)
 
 HTMLS=$(NOTEBOOKS:.ipynb=.html)
 
@@ -18,6 +25,10 @@ default: _site
 
 %/slides.html: %/*.md Makefile
 	cat $^ | $(PANDOC) $(PANDOCARGS) -o $@
+
+# https://gist.github.com/kristopherjohnson/7466917
+%.html : %.md Makefile #jekyll.tpl
+	$(PANDOC) $(PANDOC_HTML_OPTIONS) $< > $@
 
 %.png: %.py Makefile
 	python $< $@
@@ -31,34 +42,11 @@ default: _site
 %.png: %.uml Makefile
    java -Djava.awt.headless=true -jar plantuml.jar -p < $< > $@
 
-%.html: %.nbconvert.ipynb Makefile jekyll.tpl
-	jupyter nbconvert --to html  --template jekyll.tpl --stdout $< > $@
-
-%.v2.ipynb: %.nbconvert.ipynb
-	jupyter nbconvert --to notebook --nbformat 2 --stdout $< > $@
-
-%.nbconvert.ipynb: %.ipynb
-	jupyter nbconvert --to notebook --allow-errors --ExecutePreprocessor.timeout=120 --execute --stdout $< > $@
-
-notes.pdf: combined.ipynb Makefile
-	jupyter nbconvert --to pdf --template latex.tplx $<
-	mv combined.pdf notes.pdf
-
-combined.ipynb: $(EXECUTED)
-	python nbmerge.py $^ $@
-
-notes.tex: combined.ipynb Makefile
-	jupyter nbconvert --to latex --template latex.tplx $<
-	mv combined.tex notes.tex
-
-notebooks.zip: ${NBV2}
-	zip -r notebooks $^
-
 master.zip: Makefile
 	rm -f master.zip
 	wget https://github.com/Giovanni1085/indigo-jekyll/archive/master.zip
 
-ready: indigo $(HTMLS) notes.pdf notebooks.zip
+ready: indigo $(HTMLS)
 
 indigo-jekyll-master: Makefile master.zip
 	rm -rf indigo-jekyll-master
@@ -89,6 +77,7 @@ preview: ready
 	jekyll serve --verbose
 
 clean:
+	- $(RM) $(EXPORTED_DOCS)
 	rm -f ch*/generated/*.png
 	rm -rf ch*/*.html
 	rm -f ch*/*.pyc
@@ -96,22 +85,22 @@ clean:
 	rm -rf _site
 	rm -rf images img js css ati_css fonts _includes _layouts favicon* master.zip indigo-jekyll-master
 	rm -f indigo
-	rm -f ch01python/analyzer.py
-	rm -f ch01python/eight
-	rm -f ch01python/eight.py
-	rm -rf ch01python/module1/
-	rm -f ch01python/pretty.py
+	#rm -f ch01python/analyzer.py
+	#rm -f ch01python/eight
+	#rm -f ch01python/eight.py
+	#rm -rf ch01python/module1/
+	#rm -f ch01python/pretty.py
 	rm -f ch*/*.nbconvert.ipynb
 	rm -rf ch*/*.v2.ipynb
 	rm -rf combined*
-	rm -f notes.pdf
-	rm -f notes.tex
-	rm -f ch04packaging/greeter.py
-	rm -f ch04packaging/map.png
-	rm -f ch05construction/anotherfile.py
-	rm -f ch05construction/config.yaml
-	rm -f ch05construction/context.py
-	rm -f ch06design/fixed.png
-	rm -f ch07dry/datasource*.yaml
-	rm -f ch07dry/example.yaml
-	rm -f notebooks.zip
+	#rm -f notes.pdf
+	#rm -f notes.tex
+	#rm -f ch04packaging/greeter.py
+	#rm -f ch04packaging/map.png
+	#rm -f ch05construction/anotherfile.py
+	#rm -f ch05construction/config.yaml
+	#rm -f ch05construction/context.py
+	#rm -f ch06design/fixed.png
+	#rm -f ch07dry/datasource*.yaml
+	#rm -f ch07dry/example.yaml
+	#rm -f notebooks.zip

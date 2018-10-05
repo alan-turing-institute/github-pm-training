@@ -1,3 +1,8 @@
+---
+title: Meetings
+---
+
+
 Theory Session 2: Agile Ceremonies
 ==================================
 
@@ -83,3 +88,4 @@ Daily standup
 (Maximum 15 minutes, often shorter.)
 
 For distributed teams, we can use 'geekbot' to help run this meeting via Slack.
+=======

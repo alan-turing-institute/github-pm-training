@@ -1,4 +1,8 @@
-Practical Session 3: Version Control in Github's Web Interface
+---
+title: Version control in Github's web interface
+---
+
+# Practical Session 3: Version Control in Github's Web Interface
 ==============================================================
 
 The trainer will guide team members to create a document in Github's Wiki

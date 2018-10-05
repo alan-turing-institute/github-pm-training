@@ -1,3 +1,7 @@
+---
+title: Agile project management
+---
+
 Introduction: Agile Project Management
 ==========================================
 

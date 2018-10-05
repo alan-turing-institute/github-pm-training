@@ -1,4 +1,8 @@
-Practical Session 2: Markdown and the Wiki
+---
+title: Markdown and the Wiki
+---
+
+# Practical Session 2: Markdown and the Wiki
 ==========================================
 
 The trainer will guide team members to create a document in Github's Wiki
